@@ -1,0 +1,184 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* Top Menu */
+
+.top-menu {
+  position: relative;
+}
+
+.top-menu:after {
+  background: linear-gradient(
+    to right,
+    #3fb787 25%,
+    #60dbfa 25%,
+    #60dbfa 50%,
+    #de0a2f 50%,
+    #de0a2f 75%,
+    #ea5327 75%
+  );
+  position: absolute;
+  content: "" !important;
+  height: 5px !important;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  visibility: visible !important;
+}
+
+.brand {
+  display: block !important;
+  padding-left: 0 !important;
+}
+
+.git-front {
+  font-weight: 700;
+  font-size: 140%;
+}
+
+.brand-description {
+  font-size: 90%;
+  color: #bdbdbd;
+}
+
+.schkn {
+  margin: 0 5px;
+}
+
+/* Main Grid */
+
+.main-grid {
+  background: #f5f6fa;
+}
+
+/* Statistics  */
+
+.statistic > .label,
+.statistic > .value {
+  font-family: "Roboto", sans-serif !important;
+}
+
+.statistic > .value > .icon,
+.statistic > .label {
+  padding: 3px !important;
+}
+
+/* Icons and backgrounds */
+
+i.icon.react {
+  color: #60dbfa;
+}
+
+i.icon.angular {
+  color: #de0a2f;
+}
+
+i.icon.ember {
+  color: #ea5327;
+}
+
+i.icon.star {
+  color: #fbbd08;
+}
+
+i.icon.vuejs {
+  color: #3fb787;
+}
+
+i.icon.heart {
+  color: #de0a2f;
+  margin-left: 5px !important;
+}
+
+.react-label,
+.angular-label,
+.vuejs-label,
+.ember-label {
+  color: #fff !important;
+  font-size: 95% !important;
+}
+
+.react-label {
+  background-color: #60dbfa !important;
+}
+
+.angular-label {
+  background-color: #de0a2f !important;
+}
+
+.vuejs-label {
+  background-color: #3fb787 !important;
+}
+
+.ember-label {
+  background-color: #ea5327 !important;
+}
+
+.trophy-1 {
+  color: #fbbd08;
+}
+
+.trophy-2 {
+  color: #c0c0c0;
+}
+
+.trophy-3 {
+  color: #cd7f32;
+}
+
+.trophy-4 {
+  color: #fff;
+}
+
+/* Results */
+
+.results-segment {
+  min-height: 600px;
+}
+
+.repo-item-vuejs {
+  border-left: 5px solid #3fb787 !important;
+}
+
+.repo-item-react {
+  border-left: 5px solid #60dbfa !important;
+}
+
+.repo-item-angular {
+  border-left: 5px solid #de0a2f !important;
+}
+
+.repo-item-ember {
+  border-left: 5px solid #ea5327 !important;
+}
+
+/* Framework Info */
+
+.framework-icon {
+  margin-bottom: 25px !important;
+}
+
+.framework-image {
+  margin-right: 10px !important;
+}
+
+.framework-info, .ecosystem-item {
+  cursor: pointer;
+}
+
+.ecosystem-segment {
+  min-height: 75px;
+}
+
+/* Contenders */
+
+.contender-label {
+  background-color: #e8e8e8 !important;
+}
