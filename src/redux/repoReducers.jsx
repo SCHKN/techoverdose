@@ -2,6 +2,7 @@ import {
   requestRepos,
   fetchReposSuccess,
   addError,
+  SET_CONFIG,
   REQUEST_REPOS,
   FETCH_REPOS_SUCCESS,
   ADD_ERROR,
@@ -25,6 +26,13 @@ import {
 
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
+    case SET_CONFIG:
+      return {
+        ...state,
+        category: action.name,
+        frameworkSelected: action.config.frameworkSelected,
+        frameworks: action.config.frameworks
+      };
     case REQUEST_REPOS:
       return {
         ...state,

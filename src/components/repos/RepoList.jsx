@@ -15,7 +15,7 @@ class RepoList extends Component {
     const matchingFramework = data.frameworks.find(f => {
       return f.framework === data.frameworkSelected;
     });
-    return (
+    return matchingFramework ? (
       <Segment
         loading={matchingFramework.isRepoFetching}
         className="results-segment animated fadeIn"
@@ -37,6 +37,8 @@ class RepoList extends Component {
             }
           })}
       </Segment>
+    ) : (
+      <Segment />
     );
   }
 }

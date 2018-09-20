@@ -1,0 +1,96 @@
+{
+  "frameworkSelected": "vuejs",
+  "frameworks": [
+    {
+      "framework": "react",
+      "isContender": false,
+      "organization": "facebook",
+      "officialRepoName": "react",
+      "ecosystem": ["redux", "react-native", "preact", "rxjs"],
+      "subredditName": "reactjs",
+      "repos": []
+    },
+    {
+      "framework": "angular",
+      "isContender": false,
+      "organization": "angular",
+      "officialRepoName": "angular",
+      "ecosystem": ["primeng"],
+      "subredditName": "angularjs",
+      "repos": []
+    },
+    {
+      "framework": "vuejs",
+      "isContender": false,
+      "organization": "vuejs",
+      "officialRepoName": "vue",
+      "ecosystem": ["nuxt"],
+      "subredditName": "vuejs",
+      "repos": []
+    },
+    {
+      "framework": "ember",
+      "isContender": false,
+      "organization": "emberjs",
+      "officialRepoName": "ember.js",
+      "subredditName": "emberjs",
+      "repos": []
+    },
+    {
+      "framework": "hyperapp",
+      "isContender": true,
+      "organization": "jorgebucaran",
+      "officialRepoName": "hyperapp",
+      "subredditName": "HyperApp",
+      "repos": []
+    },
+    {
+      "framework": "backbone",
+      "isContender": true,
+      "organization": "jashkenas",
+      "officialRepoName": "backbone",
+      "subredditName": "backbonejs",
+      "repos": []
+    },
+    {
+      "framework": "polymer",
+      "isContender": true,
+      "organization": "Polymer",
+      "officialRepoName": "polymer",
+      "subredditName": "polymerjs",
+      "repos": []
+    },
+    {
+      "framework": "bootstrap",
+      "isContender": true,
+      "organization": "twbs",
+      "officialRepoName": "bootstrap",
+      "subredditName": "bootstrap",
+      "repos": []
+    },
+    {
+      "framework": "sass",
+      "isContender": true,
+      "organization": "sass",
+      "officialRepoName": "sass",
+      "subredditName": "Sass",
+      "repos": []
+    },
+    {
+      "framework": "jquery",
+      "isContender": true,
+      "organization": "jquery",
+      "officialRepoName": "jquery",
+      "subredditName": "jquery",
+      "repos": []
+    },
+    {
+      "framework": "electron",
+      "isContender": true,
+      "organization": "electron",
+      "officialRepoName": "electron",
+      "subredditName": "electronjs",
+      "repos": []
+    }
+  ]
+}

@@ -10,6 +10,8 @@ import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import registerServiceWorker from "./registerServiceWorker";
 import { reducer, fetchPosts, fetchFrameworks } from "./redux/repoReducers";
+import { loadJSON } from "./common/jsonUtil";
+import { setConfig } from "./redux/repoActions";
 
 // State should look like
 
@@ -46,108 +48,31 @@ import { reducer, fetchPosts, fetchFrameworks } from "./redux/repoReducers";
 // }
 
 export const initialState = {
-  frameworkSelected: "vuejs",
+  category: "front",
   dataSourceSelected: "github",
   showEcosystems: false,
   filter: "year",
   errors: [],
-  frameworks: [
-    {
-      framework: "react",
-      isContender: false,
-      // github specific
-      organization: "facebook",
-      officialRepoName: "react",
-      ecosystem: ["redux", "react-native", "preact", "rxjs"],
-      // reddit specific
-      subredditName: "reactjs"
-    },
-    {
-      framework: "angular",
-      isContender: false,
-      organization: "angular",
-      officialRepoName: "angular",
-      ecosystem: ["primeng"],
-      subredditName: "angularjs"
-    },
-    {
-      framework: "vuejs",
-      isContender: false,
-      organization: "vuejs",
-      officialRepoName: "vue",
-      ecosystem: ["nuxt"],
-      subredditName: "vuejs"
-    },
-    {
-      framework: "ember",
-      isContender: false,
-      organization: "emberjs",
-      officialRepoName: "ember.js",
-      subredditName: "emberjs"
-    },
-    {
-      framework: "hyperapp",
-      isContender: true,
-      organization: "jorgebucaran",
-      officialRepoName: "hyperapp",
-      subredditName: "HyperApp"
-    },
-    {
-      framework: "backbone",
-      isContender: true,
-      organization: "jashkenas",
-      officialRepoName: "backbone",
-      subredditName: "backbonejs"
-    },
-    {
-      framework: "polymer",
-      isContender: true,
-      organization: "Polymer",
-      officialRepoName: "polymer",
-      subredditName: "polymerjs"
-    },
-    {
-      framework: "bootstrap",
-      isContender: true,
-      organization: "twbs",
-      officialRepoName: "bootstrap",
-      subredditName: "bootstrap"
-    },
-    {
-      framework: "sass",
-      isContender: true,
-      organization: "sass",
-      officialRepoName: "sass",
-      subredditName: "Sass"
-    },
-    {
-      framework: "jquery",
-      isContender: true,
-      organization: "jquery",
-      officialRepoName: "jquery",
-      subredditName: "jquery"
-    },
-    {
-      framework: "electron",
-      isContender: true,
-      organization: "electron",
-      officialRepoName: "electron",
-      subredditName: "electronjs"
-    }
-  ]
+  frameworks: [],
+  frameworkSelected: ""
 };
 
 export const store = createStore(reducer, applyMiddleware(thunkMiddleware));
 
-initialState.frameworks
-  .filter(t => !t.isContender)
-  .map(f =>
-    store.dispatch(
-      fetchFrameworks(f.framework, f.organization, f.officialRepoName)
-    )
-  );
+const initializeApp = json => {
+  store.dispatch(setConfig(JSON.parse(json), store.getState().category));
+  store
+    .getState()
+    .frameworks.filter(t => !t.isContender)
+    .map(f =>
+      store.dispatch(
+        fetchFrameworks(f.framework, f.organization, f.officialRepoName)
+      )
+    );
+  store.dispatch(fetchPosts(store.getState().frameworkSelected));
+};
 
-store.dispatch(fetchPosts(initialState.frameworks[2].framework));
+loadJSON(store.getState().category, initializeApp);
 
 ReactDOM.render(
   <Provider store={store}>

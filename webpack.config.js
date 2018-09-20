@@ -19,7 +19,8 @@ module.exports = {
         use: ["style-loader", "css-loader"]
       },
       {
-        test: /\.(ttf|eot|woff|woff2|ico)$/,
+        type: 'javascript/auto',
+        test: /\.(ttf|eot|woff|woff2|ico|json)$/,
         use: [
           {
             loader: "file-loader",

@@ -1,3 +1,5 @@
+// Configuration
+export const SET_CONFIG = "SET_CONFIG";
 // Repository fetching
 export const REQUEST_REPOS = "REQUEST_REPOS";
 export const FETCH_REPOS_SUCCESS = "FETCH_REPOS_SUCCESS";
@@ -14,6 +16,14 @@ export const SHOW_ECOSYSTEMS = "SHOW_ECOSYSTEMS";
 export const HIDE_ECOSYSTEMS = "HIDE_ECOSYSTEMS";
 
 // Actions creators
+export const setConfig = (config, name) => {
+  return {
+    type: SET_CONFIG,
+    config,
+    name
+  };
+};
+
 export const requestRepos = (framework, ecosystem) => {
   return {
     type: REQUEST_REPOS,
