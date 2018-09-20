@@ -59,7 +59,7 @@ export const initialState = {
 
 export const store = createStore(reducer, applyMiddleware(thunkMiddleware));
 
-const initializeApp = json => {
+export const initializeApp = json => {
   store.dispatch(setConfig(JSON.parse(json), store.getState().category));
   store
     .getState()

@@ -1,5 +1,7 @@
 // Configuration
 export const SET_CONFIG = "SET_CONFIG";
+export const SET_CATEGORY = "SET_CATEGORY";
+export const RESET_STATE = "RESET_STATE";
 // Repository fetching
 export const REQUEST_REPOS = "REQUEST_REPOS";
 export const FETCH_REPOS_SUCCESS = "FETCH_REPOS_SUCCESS";
@@ -23,6 +25,19 @@ export const setConfig = (config, name) => {
     name
   };
 };
+
+export const setCategory = (category) => {
+  return {
+    type: SET_CATEGORY,
+    category
+  }
+}
+
+export const resetState = () => {
+  return {
+    type: RESET_STATE
+  }
+}
 
 export const requestRepos = (framework, ecosystem) => {
   return {

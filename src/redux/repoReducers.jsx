@@ -15,23 +15,41 @@ import {
   setFilter,
   setDatasource,
   SHOW_ECOSYSTEMS,
-  HIDE_ECOSYSTEMS
+  HIDE_ECOSYSTEMS,
+  SET_CATEGORY,
+  setCategory,
+  RESET_STATE,
+  resetState
 } from "./repoActions";
 import axios from "axios";
-import { initialState, store } from "./../index";
+import { initialState, store, initializeApp } from "./../index";
 import {
   getLowerBound,
   getUpperBound
 } from "./../components/filtering/filterUtils";
+import { loadJSON } from './../common/jsonUtil';
+
 
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
+    case RESET_STATE: {
+      return {
+        ...state,
+        frameworkSelected: '',
+        frameworks: []
+      }
+    }
     case SET_CONFIG:
       return {
         ...state,
         category: action.name,
         frameworkSelected: action.config.frameworkSelected,
         frameworks: action.config.frameworks
+      };
+    case SET_CATEGORY:
+      return {
+        ...state,
+        category: action.category
       };
     case REQUEST_REPOS:
       return {
@@ -180,6 +198,14 @@ export const setFilterAndFetchPosts = filter => {
     );
   };
 };
+
+export const setCategoryAndFetchAll = category => {
+  return dispatch => {
+    dispatch(resetState())
+    dispatch(setCategory(category))
+    loadJSON(store.getState().category, initializeApp);
+  }
+}
 
 export const setDatasourceAndFetchPosts = datasource => {
   return dispatch => {

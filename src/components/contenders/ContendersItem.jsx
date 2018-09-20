@@ -19,11 +19,11 @@ class ContendersItem extends Component {
   }
 
   render() {
-    const { framework } = this.props;
+    const { framework, category } = this.props;
     return (
       <List.Item onClick={() => this.handleClick(framework)}>
         <Label as="a" image className="contender-label">
-          <img src={require("../../images/" + framework + ".png")} />
+          <img src={require("../../images/" + category + "/" + framework + ".png")} />
           {framework}
         </Label>
       </List.Item>

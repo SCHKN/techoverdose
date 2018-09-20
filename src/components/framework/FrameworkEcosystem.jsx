@@ -8,7 +8,7 @@ const mapDispatchToProps = dispatch => ({
     dispatch(fetchPosts(framework, ecosystem))
 });
 
-const FrameworkEcosystem = ({ ecosystem, framework, fetchPosts }) => {
+const FrameworkEcosystem = ({ ecosystem, framework, fetchPosts, category }) => {
   return (
     <Segment className="ecosystem-segment">
       <List horizontal>
@@ -19,7 +19,7 @@ const FrameworkEcosystem = ({ ecosystem, framework, fetchPosts }) => {
             key={library}
           >
             <Image
-              src={require("../../images/" + library + ".png")}
+              src={require("../../images/" + category + "/" + library + ".png")}
               size="mini"
             />
           </List.Item>

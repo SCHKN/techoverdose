@@ -17,7 +17,11 @@ const ContendersSegment = ({ data }) => {
             .filter(p => p.isContender)
             .sort((a, b) => a.framework > b.framework)
             .map(z => (
-              <ContendersItem framework={z.framework} key={z.framework} />
+              <ContendersItem
+                framework={z.framework}
+                key={z.framework}
+                category={data.category}
+              />
             ))}
       </List>
     </Segment>

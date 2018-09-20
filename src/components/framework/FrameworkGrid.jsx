@@ -24,6 +24,7 @@ const FrameworkGrid = ({ data, handleScroll }) => {
                   rank={index + 1}
                   showEcosystems={data.showEcosystems}
                   handleScroll={handleScroll}
+                  category={data.category}
                 />
               </Grid.Column>
             ))}

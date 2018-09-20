@@ -15,15 +15,6 @@ body {
 }
 
 .top-menu:after {
-  background: linear-gradient(
-    to right,
-    #3fb787 25%,
-    #60dbfa 25%,
-    #60dbfa 50%,
-    #de0a2f 50%,
-    #de0a2f 75%,
-    #ea5327 75%
-  );
   position: absolute;
   content: "" !important;
   height: 5px !important;
@@ -37,94 +28,45 @@ body {
   display: block !important;
   padding-left: 0 !important;
 }
-
 .git-front {
   font-weight: 700;
   font-size: 140%;
 }
-
 .brand-description {
   font-size: 90%;
   color: #bdbdbd;
 }
-
 .schkn {
   margin: 0 5px;
 }
-
 /* Main Grid */
-
 .main-grid {
   background: #f5f6fa;
 }
-
 /* Statistics  */
-
 .statistic > .label,
 .statistic > .value {
   font-family: "Roboto", sans-serif !important;
 }
-
 .statistic > .value > .icon,
 .statistic > .label {
   padding: 3px !important;
 }
-
 /* Icons and backgrounds */
-
-i.icon.react {
-  color: #60dbfa;
-}
-
-i.icon.angular {
-  color: #de0a2f;
-}
-
-i.icon.ember {
-  color: #ea5327;
-}
-
 i.icon.star {
   color: #fbbd08;
 }
-
-i.icon.vuejs {
-  color: #3fb787;
-}
-
 i.icon.heart {
   color: #de0a2f;
   margin-left: 5px !important;
 }
-
-.react-label,
-.angular-label,
-.vuejs-label,
-.ember-label {
+.white-text {
   color: #fff !important;
   font-size: 95% !important;
 }
-
-.react-label {
-  background-color: #60dbfa !important;
-}
-
-.angular-label {
-  background-color: #de0a2f !important;
-}
-
-.vuejs-label {
-  background-color: #3fb787 !important;
-}
-
-.ember-label {
-  background-color: #ea5327 !important;
-}
-
 .trophy-1 {
   color: #fbbd08;
 }
-
 .trophy-2 {
   color: #c0c0c0;
 }
@@ -138,9 +80,74 @@ i.icon.heart {
 }
 
 /* Results */
-
 .results-segment {
   min-height: 600px;
+}
+.repo-image {
+  margin-right: 20px !important;
+}
+/* Framework Info */
+.framework-icon {
+  margin-bottom: 25px !important;
+}
+.framework-image {
+  margin-bottom: 20px !important;
+}
+.framework-info,
+.ecosystem-item {
+  cursor: pointer;
+}
+
+.ecosystem-segment {
+  min-height: 75px;
+}
+
+/* Contenders */
+.contender-label {
+  background-color: #e8e8e8 !important;
+}
+/* Specific */
+
+/* Theme */
+
+.front-menu:after {
+  background: linear-gradient(
+    to right,
+    #3fb787 25%,
+    #60dbfa 25%,
+    #60dbfa 50%,
+    #de0a2f 50%,
+    #de0a2f 75%,
+    #ea5327 75%
+  );
+}
+
+.devops-menu:after {
+  background: linear-gradient(
+    to right,
+    #24b8eb 25%,
+    #326de6 25%,
+    #326de6 50%,
+    black 50%,
+    black 75%,
+    #335061 75%
+  );
+}
+
+/* Front */
+.react-label {
+  background-color: #60dbfa !important;
+}
+
+.angular-label {
+  background-color: #de0a2f !important;
+}
+.vuejs-label {
+  background-color: #3fb787 !important;
+}
+
+.ember-label {
+  background-color: #ea5327 !important;
 }
 
 .repo-item-vuejs {
@@ -159,26 +166,33 @@ i.icon.heart {
   border-left: 5px solid #ea5327 !important;
 }
 
-/* Framework Info */
-
-.framework-icon {
-  margin-bottom: 25px !important;
+/* Dev Ops */
+.docker-label {
+  background-color: #24b8eb !important;
+}
+.kubernetes-label {
+  background-color: #326de6 !important;
+}
+.ansible-label {
+  background-color: black !important;
 }
 
-.framework-image {
-  margin-right: 10px !important;
+.jenkins-label {
+  background-color: #335061 !important;
 }
 
-.framework-info, .ecosystem-item {
-  cursor: pointer;
+.repo-item-docker {
+  border-left: 5px solid #24b8eb !important;
 }
 
-.ecosystem-segment {
-  min-height: 75px;
+.repo-item-kubernetes {
+  border-left: 5px solid #326de6 !important;
 }
 
-/* Contenders */
+.repo-item-ansible {
+  border-left: 5px solid black !important;
+}
 
-.contender-label {
-  background-color: #e8e8e8 !important;
+.repo-item-jenkins {
+  border-left: 5px solid #335061 !important;
 }

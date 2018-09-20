@@ -1,0 +1,52 @@
+{
+  "frameworkSelected": "docker",
+  "frameworks": [
+    {
+      "framework": "docker",
+      "isContender": false,
+      "organization": "moby",
+      "officialRepoName": "moby",
+      "subredditName": "docker",
+      "repos": []
+    },
+    {
+      "framework": "kubernetes",
+      "isContender": false,
+      "organization": "kubernetes",
+      "officialRepoName": "kubernetes",
+      "subredditName": "kubernetes",
+      "repos": []
+    },
+    {
+      "framework": "jenkins",
+      "isContender": false,
+      "organization": "jenkinsci",
+      "officialRepoName": "jenkins",
+      "subredditName": "jenkinsci",
+      "repos": []
+    },
+    {
+      "framework": "ansible",
+      "isContender": false,
+      "organization": "ansible",
+      "officialRepoName": "ansible",
+      "subredditName": "ansible",
+      "repos": []
+    },
+    {
+      "framework": "vagrant",
+      "isContender": true,
+      "organization": "hashicorp",
+      "officialRepoName": "vagrant",
+      "subredditName": "vagrant",
+      "repos": []
+    },
+    {
+      "framework": "chef",
+      "isContender": true,
+      "organization": "chef",
+      "officialRepoName": "chef",
+      "repos": []
+    }
+  ]
+}
