@@ -10,6 +10,7 @@ import ReactGA from "react-ga";
 import FeaturesMessage from "./components/message/FeaturesMessage";
 import ReactDOM from "react-dom";
 import ContendersSegment from './components/contenders/ContendersSegment';
+import CategoryMenu from './components/category/CategoryMenu';
 
 // ReactGA.initialize('UA-125805120-1');
 // ReactGA.pageview(window.location.pathname + window.location.search);
@@ -33,6 +34,7 @@ class App extends Component {
         <Grid className="main-grid">
           <Grid.Column>
             <Container>
+              <CategoryMenu />
               {/* <FeaturesMessage /> */}
               <Divider horizontal onClick={this.handleScrollToElement}>
                 Frameworks

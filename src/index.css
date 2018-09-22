@@ -1,5 +1,5 @@
 * {
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 body {
@@ -46,7 +46,7 @@ body {
 /* Statistics  */
 .statistic > .label,
 .statistic > .value {
-  font-family: "Roboto", sans-serif !important;
+  font-family: "Lato", sans-serif !important;
 }
 .statistic > .value > .icon,
 .statistic > .label {
@@ -106,6 +106,10 @@ i.icon.heart {
 .contender-label {
   background-color: #e8e8e8 !important;
 }
+.contenders-segment {
+  margin-top: 20px;
+}
+
 /* Specific */
 
 /* Theme */
