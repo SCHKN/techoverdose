@@ -35,6 +35,10 @@ const CategoryMenu = ({ changeCategory }) => {
         <Icon name="idea" />
         <Responsive {...Responsive.onlyComputer}>Machine Learning</Responsive>
       </Menu.Item>
+      <Menu.Item name="btc" onClick={() => handleClick(changeCategory, "crypto")}>
+        <Icon name="btc" />
+        <Responsive {...Responsive.onlyComputer}>Crypto</Responsive>
+      </Menu.Item>
     </Menu>
   );
 };

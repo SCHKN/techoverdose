@@ -1,0 +1,45 @@
+{
+  "frameworkSelected": "bitcoin",
+  "frameworks": [
+    {
+      "framework": "bitcoin",
+      "isContender": false,
+      "organization": "bitcoin",
+      "officialRepoName": "bitcoin",
+      "subredditName": "Bitcoin",
+      "repos": []
+    },
+    {
+      "framework": "ethereum",
+      "isContender": false,
+      "organization": "ethereum",
+      "officialRepoName": "go-ethereum",
+      "subredditName": "ethereum",
+      "repos": []
+    },
+    {
+      "framework": "litecoin",
+      "isContender": false,
+      "organization": "litecoin-project",
+      "officialRepoName": "litecoin",
+      "subredditName": "litecoin",
+      "repos": []
+    },
+    {
+      "framework": "ripple",
+      "isContender": false,
+      "organization": "ripple",
+      "officialRepoName": "rippled",
+      "subredditName": "Ripple",
+      "repos": []
+    },
+    {
+      "framework": "monero",
+      "isContender": true,
+      "organization": "monero-project",
+      "officialRepoName": "monero",
+      "subredditName": "Monero",
+      "repos": []
+    }
+  ]
+}
