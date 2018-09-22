@@ -6,7 +6,8 @@ import { setCategoryAndFetchAll } from "../../redux/repoReducers";
 
 const options = [
   { key: "front", text: "Front-End", value: "front", icon: "paint brush" },
-  { key: "devops", text: "DevOps", value: "devops", icon: "server" }
+  { key: "devops", text: "DevOps", value: "devops", icon: "server" },
+  { key: "ml", text: "Machine Learning", value: "ml", icon: "idea" },
 ];
 
 const mapStateToProps = state => ({
@@ -19,18 +20,14 @@ const mapDispatchToProps = dispatch => ({
 
 const TopMenu = ({ changeCategory, data }) => {
   return (
-    <Menu
-      size="huge"
-      borderless
-      className={"top-menu " + data.category + "-menu"}
-    >
+    <Menu size="huge" borderless className={"top-menu " + data.category + "-menu"}>
       <Menu.Item>
         <img src={logo} />
       </Menu.Item>
       <Menu.Item className="brand">
         <div className="git-front">TechOverdose</div>
         <div className="brand-description">
-          <p>Opinionated serverless tech aggregator</p>
+          <p>Tech Aggregator for Tech Junkies</p>
         </div>
       </Menu.Item>
       <Menu.Menu position="right">

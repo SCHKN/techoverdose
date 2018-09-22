@@ -1,0 +1,36 @@
+{
+  "frameworkSelected": "tensorflow",
+  "frameworks": [
+    {
+      "framework": "tensorflow",
+      "isContender": false,
+      "organization": "tensorflow",
+      "officialRepoName": "tensorflow",
+      "subredditName": "tensorflow",
+      "repos": []
+    },
+    {
+      "framework": "scikit-learn",
+      "isContender": false,
+      "organization": "scikit-learn",
+      "officialRepoName": "scikit-learn",
+      "subredditName": "scikit-learn",
+      "repos": []
+    },
+    {
+      "framework": "caffe",
+      "isContender": false,
+      "organization": "BVLC",
+      "officialRepoName": "caffe",
+      "repos": []
+    },
+    {
+      "framework": "pytorch",
+      "isContender": false,
+      "organization": "pytorch",
+      "officialRepoName": "pytorch",
+      "subredditName": "pytorch",
+      "repos": []
+    }
+  ]
+}

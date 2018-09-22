@@ -48,7 +48,7 @@ import { setConfig } from "./redux/repoActions";
 // }
 
 export const initialState = {
-  category: "front",
+  category: "ml",
   dataSourceSelected: "github",
   showEcosystems: false,
   filter: "year",

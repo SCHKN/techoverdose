@@ -196,3 +196,35 @@ i.icon.heart {
 .repo-item-jenkins {
   border-left: 5px solid #335061 !important;
 }
+
+/* Machine Learning */
+
+.tensorflow-label {
+  background-color: #e4ba51 !important;
+}
+.scikit-learn-label {
+  background-color: #3398cc !important;
+}
+.caffe-label {
+  background-color: #c30000 !important;
+}
+
+.pytorch-label {
+  background-color: #f05732 !important;
+}
+
+.repo-item-tensorflow {
+  border-left: 5px solid #e4ba51 !important;
+}
+
+.repo-item-scikit-learn {
+  border-left: 5px solid #3398cc !important;
+}
+
+.repo-item-caffe {
+  border-left: 5px solid #c30000 !important;
+}
+
+.repo-item-pytorch {
+  border-left: 5px solid #f05732 !important;
+}
