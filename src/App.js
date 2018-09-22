@@ -11,8 +11,8 @@ import FeaturesMessage from "./components/message/FeaturesMessage";
 import ReactDOM from "react-dom";
 import ContendersSegment from './components/contenders/ContendersSegment';
 
-ReactGA.initialize('UA-125805120-1');
-ReactGA.pageview(window.location.pathname + window.location.search);
+// ReactGA.initialize('UA-125805120-1');
+// ReactGA.pageview(window.location.pathname + window.location.search);
 
 class App extends Component {
   constructor(props) {

@@ -134,6 +134,18 @@ i.icon.heart {
   );
 }
 
+.ml-menu:after {
+  background: linear-gradient(
+    to right,
+    #e4ba51 25%,
+    #3398cc 25%,
+    #3398cc 50%,
+    #c30000 50%,
+    #c30000 75%,
+    #f05732 75%
+  );
+}
+
 /* Front */
 .react-label {
   background-color: #60dbfa !important;
