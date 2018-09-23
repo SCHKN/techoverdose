@@ -16,36 +16,30 @@ import { setConfig } from "./redux/repoActions";
 // State should look like
 
 // const state = {
-//    frameworkSelected: 'react',
-//    ecosystemSelected: 'redux',
-//    showEcosystems: 'false',
-//    filter: 'day',
-//    [
-//    {
-//     framework: 'react',
-//     stars: 3,
-//     subscribers: 0,
-//     isFrameworkFetching: true,
-//     isRepoFetching: true
-//     repos: [
-//       repo1,
-//       repo2
-//     ],
-//    ecosystem: ["redux", "react-native", "styled-components"]
-//   },
-//   {
-//     framework: 'angular',
-//     stars: 4,
-//     subscribers: 23,
-//     isFrameworkFetching: true,
-//     isRepoFetching: false
-//     repos: [
-//       repo1,
-//       repo2
-//     ]
-//   }
-// ]
-// }
+//   category: "front",
+//   dataSourceSelected: "github",
+//   errors: [],
+//   frameworkSelected: "react",
+//   ecosystemSelected: "redux",
+//   showEcosystems: "false",
+//   filter: "day",
+//   frameworks: [
+//     {
+//       framework: "react",
+//       stars: 3,
+//       subscribers: 0,
+//       isFrameworkFetching: true
+//       ecosystem: ["redux", "react-native", "styled-components"]
+//     },
+//     {
+//       framework: "angular",
+//       stars: 4,
+//       subscribers: 23,
+//       isFrameworkFetching: true
+//     }
+//   ],
+//   repos: []
+// };
 
 export const initialState = {
   category: "front",
@@ -54,7 +48,9 @@ export const initialState = {
   filter: "year",
   errors: [],
   frameworks: [],
-  frameworkSelected: ""
+  frameworkSelected: "",
+  repos: [],
+  repoFetching: false
 };
 
 export const store = createStore(reducer, applyMiddleware(thunkMiddleware));

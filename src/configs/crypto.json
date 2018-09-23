@@ -6,40 +6,35 @@
       "isContender": false,
       "organization": "bitcoin",
       "officialRepoName": "bitcoin",
-      "subredditName": "Bitcoin",
-      "repos": []
+      "subredditName": "Bitcoin"
     },
     {
       "framework": "ethereum",
       "isContender": false,
       "organization": "ethereum",
       "officialRepoName": "go-ethereum",
-      "subredditName": "ethereum",
-      "repos": []
+      "subredditName": "ethereum"
     },
     {
       "framework": "litecoin",
       "isContender": false,
       "organization": "litecoin-project",
       "officialRepoName": "litecoin",
-      "subredditName": "litecoin",
-      "repos": []
+      "subredditName": "litecoin"
     },
     {
       "framework": "ripple",
       "isContender": false,
       "organization": "ripple",
       "officialRepoName": "rippled",
-      "subredditName": "Ripple",
-      "repos": []
+      "subredditName": "Ripple"
     },
     {
       "framework": "monero",
       "isContender": true,
       "organization": "monero-project",
       "officialRepoName": "monero",
-      "subredditName": "Monero",
-      "repos": []
+      "subredditName": "Monero"
     }
   ]
 }

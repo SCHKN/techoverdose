@@ -7,8 +7,7 @@
       "organization": "facebook",
       "officialRepoName": "react",
       "ecosystem": ["redux", "react-native", "preact", "rxjs"],
-      "subredditName": "reactjs",
-      "repos": []
+      "subredditName": "reactjs"
     },
     {
       "framework": "angular",
@@ -16,8 +15,7 @@
       "organization": "angular",
       "officialRepoName": "angular",
       "ecosystem": ["primeng"],
-      "subredditName": "angularjs",
-      "repos": []
+      "subredditName": "angularjs"
     },
     {
       "framework": "vuejs",
@@ -25,72 +23,63 @@
       "organization": "vuejs",
       "officialRepoName": "vue",
       "ecosystem": ["nuxt"],
-      "subredditName": "vuejs",
-      "repos": []
+      "subredditName": "vuejs"
     },
     {
       "framework": "ember",
       "isContender": false,
       "organization": "emberjs",
       "officialRepoName": "ember.js",
-      "subredditName": "emberjs",
-      "repos": []
+      "subredditName": "emberjs"
     },
     {
       "framework": "hyperapp",
       "isContender": true,
       "organization": "jorgebucaran",
       "officialRepoName": "hyperapp",
-      "subredditName": "HyperApp",
-      "repos": []
+      "subredditName": "HyperApp"
     },
     {
       "framework": "backbone",
       "isContender": true,
       "organization": "jashkenas",
       "officialRepoName": "backbone",
-      "subredditName": "backbonejs",
-      "repos": []
+      "subredditName": "backbonejs"
     },
     {
       "framework": "polymer",
       "isContender": true,
       "organization": "Polymer",
       "officialRepoName": "polymer",
-      "subredditName": "polymerjs",
-      "repos": []
+      "subredditName": "polymerjs"
     },
     {
       "framework": "bootstrap",
       "isContender": true,
       "organization": "twbs",
       "officialRepoName": "bootstrap",
-      "subredditName": "bootstrap",
-      "repos": []
+      "subredditName": "bootstrap"
     },
     {
       "framework": "sass",
       "isContender": true,
       "organization": "sass",
       "officialRepoName": "sass",
-      "subredditName": "Sass",
-      "repos": []
+      "subredditName": "Sass"
     },
     {
       "framework": "jquery",
       "isContender": true,
       "organization": "jquery",
       "officialRepoName": "jquery",
-      "subredditName": "jquery",
-      "repos": []
+      "subredditName": "jquery"
     },
     {
       "framework": "electron",
       "isContender": true,
       "organization": "electron",
       "officialRepoName": "electron",
-      "subredditName": "electronjs",
-      "repos": []
+      "subredditName": "electronjs"
     }
   ]
 }

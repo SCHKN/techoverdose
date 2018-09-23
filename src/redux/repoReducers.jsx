@@ -27,17 +27,16 @@ import {
   getLowerBound,
   getUpperBound
 } from "./../components/filtering/filterUtils";
-import { loadJSON } from './../common/jsonUtil';
-
+import { loadJSON } from "./../common/jsonUtil";
 
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
     case RESET_STATE: {
       return {
         ...state,
-        frameworkSelected: '',
+        frameworkSelected: "",
         frameworks: []
-      }
+      };
     }
     case SET_CONFIG:
       return {
@@ -57,24 +56,14 @@ export const reducer = (state = initialState, action) => {
         frameworkSelected: action.framework,
         ecosystemSelected: action.ecosystem,
         errors: [],
-        frameworks: state.frameworks.map(e => {
-          if (e.framework === action.framework) {
-            e.repos = [];
-            e.isRepoFetching = true;
-          }
-          return e;
-        })
+        repos: [],
+        repoFetching: true
       };
     case FETCH_REPOS_SUCCESS:
       return {
         ...state,
-        frameworks: state.frameworks.map(e => {
-          if (e.framework === action.framework) {
-            e.repos = action.payload;
-            e.isRepoFetching = false;
-          }
-          return e;
-        })
+        repos: action.payload,
+        repoFetching: false
       };
     case REQUEST_FRAMEWORKS:
       return {
@@ -201,11 +190,11 @@ export const setFilterAndFetchPosts = filter => {
 
 export const setCategoryAndFetchAll = category => {
   return dispatch => {
-    dispatch(resetState())
-    dispatch(setCategory(category))
+    dispatch(resetState());
+    dispatch(setCategory(category));
     loadJSON(store.getState().category, initializeApp);
-  }
-}
+  };
+};
 
 export const setDatasourceAndFetchPosts = datasource => {
   return dispatch => {

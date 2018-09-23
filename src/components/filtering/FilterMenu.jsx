@@ -8,9 +8,13 @@ import {
   Responsive
 } from "semantic-ui-react";
 import { connect } from "react-redux";
-import { setFilterAndFetchPosts, setDatasourceAndFetchPosts } from "../../redux/repoReducers";
+import {
+  setFilterAndFetchPosts,
+  setDatasourceAndFetchPosts
+} from "../../redux/repoReducers";
 import { showEcosystems } from "../../redux/repoActions";
 import { hideEcosystems } from "./../../redux/repoActions";
+import SearchPopup from "./SearchPopup";
 
 const options = [
   {
@@ -66,7 +70,8 @@ const mapDispatchToProps = dispatch => ({
   changeFilter: filter => dispatch(setFilterAndFetchPosts(filter)),
   showEcosystems: () => dispatch(showEcosystems()),
   hideEcosystems: () => dispatch(hideEcosystems()),
-  changeDatasource: datasource => dispatch(setDatasourceAndFetchPosts(datasource))
+  changeDatasource: datasource =>
+    dispatch(setDatasourceAndFetchPosts(datasource))
 });
 
 const FilterMenu = ({
@@ -104,7 +109,9 @@ const FilterMenu = ({
                   header="Choose your datasource"
                   options={dataSourceOptions}
                   defaultValue={dataSourceOptions[0].value}
-                  onChange={(e, { value }) => {changeDatasource(value)}}
+                  onChange={(e, { value }) => {
+                    changeDatasource(value);
+                  }}
                 />
               </Header.Content>
             </Header>
@@ -141,6 +148,9 @@ const FilterMenu = ({
             />
           </Menu.Item>
         </Responsive>
+        {/* <Menu.Item>
+          <SearchPopup />
+        </Menu.Item> */}
       </Menu.Menu>
     </Menu>
   );

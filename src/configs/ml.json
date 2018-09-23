@@ -6,31 +6,27 @@
       "isContender": false,
       "organization": "tensorflow",
       "officialRepoName": "tensorflow",
-      "subredditName": "tensorflow",
-      "repos": []
+      "subredditName": "tensorflow"
     },
     {
       "framework": "scikit-learn",
       "isContender": false,
       "organization": "scikit-learn",
       "officialRepoName": "scikit-learn",
-      "subredditName": "scikit-learn",
-      "repos": []
+      "subredditName": "scikit-learn"
     },
     {
       "framework": "caffe",
       "isContender": false,
       "organization": "BVLC",
-      "officialRepoName": "caffe",
-      "repos": []
+      "officialRepoName": "caffe"
     },
     {
       "framework": "pytorch",
       "isContender": false,
       "organization": "pytorch",
       "officialRepoName": "pytorch",
-      "subredditName": "pytorch",
-      "repos": []
+      "subredditName": "pytorch"
     }
   ]
 }
