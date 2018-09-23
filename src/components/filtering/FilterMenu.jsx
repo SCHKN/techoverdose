@@ -11,10 +11,9 @@ import { connect } from "react-redux";
 import {
   setFilterAndFetchPosts,
   setDatasourceAndFetchPosts
-} from "../../redux/repoReducers";
-import { showEcosystems } from "../../redux/repoActions";
-import { hideEcosystems } from "./../../redux/repoActions";
+} from "../../redux/ui/uiReducer";
 import SearchPopup from "./SearchPopup";
+import { showEcosystems, hideEcosystems } from "./../../redux/ui/uiActions";
 
 const options = [
   {
@@ -59,11 +58,12 @@ const dataSourceOptions = [
 ];
 
 const mapStateToProps = state => ({
-  ecosystemVisible: state.showEcosystems,
-  frameworkSelected: state.frameworkSelected,
-  ecosystemSelected: state.ecosystemSelected,
-  dataSourceSelected: state.dataSourceSelected,
-  filter: state.filter
+  ui: state.ui
+  // ecosystemVisible: state.showEcosystems,
+  // frameworkSelected: state.frameworkSelected,
+  // ecosystemSelected: state.ecosystemSelected,
+  // dataSourceSelected: state.dataSourceSelected,
+  // filter: state.filter
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -79,12 +79,20 @@ const FilterMenu = ({
   changeDatasource,
   showEcosystems,
   hideEcosystems,
-  ecosystemVisible,
-  frameworkSelected,
-  ecosystemSelected,
-  dataSourceSelected,
-  filter
+  ui
+  // ecosystemVisible,
+  // frameworkSelected,
+  // ecosystemSelected,
+  // dataSourceSelected,
+  // filter
 }) => {
+  const {
+    frameworkSelected,
+    ecosystemSelected,
+    dataSourceSelected,
+    filter
+  } = ui;
+  const ecosystemVisible = ui.showEcosystems;
   return (
     <Menu size="large">
       <Responsive minWidth="768">

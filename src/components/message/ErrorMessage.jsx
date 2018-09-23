@@ -3,7 +3,7 @@ import { Message } from "semantic-ui-react";
 import { connect } from "react-redux";
 
 const mapStateToProps = state => ({
-  errors: state.errors
+  errors: state.ui.errors
 });
 
 class ErrorMessage extends Component {

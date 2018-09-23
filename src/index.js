@@ -9,26 +9,32 @@ import thunkMiddleware from "redux-thunk";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import registerServiceWorker from "./registerServiceWorker";
-import { reducer, fetchPosts, fetchFrameworks } from "./redux/repoReducers";
+import { fetchPosts } from "./redux/repos/reposReducer";
 import { loadJSON } from "./common/jsonUtil";
-import { setConfig } from "./redux/repoActions";
+import rootReducer from "./redux/rootReducer";
+import { setFrameworkSelected } from "./redux/ui/uiActions";
+import { setFrameworks } from "./redux/frameworks/frameworksActions";
+import { fetchFrameworks } from './redux/frameworks/frameworksReducer'
+import { setCategory } from './redux/category/categoryActions';
 
 // State should look like
 
 // const state = {
 //   category: "front",
-//   dataSourceSelected: "github",
-//   errors: [],
-//   frameworkSelected: "react",
-//   ecosystemSelected: "redux",
-//   showEcosystems: "false",
-//   filter: "day",
+//   ui: {
+//     frameworkSelected: "react",
+//     ecosystemSelected: "redux",
+//     showEcosystems: "false",
+//     filter: "day",
+//     dataSourceSelected: "github",
+//     errors: [],
+//   },
 //   frameworks: [
 //     {
 //       framework: "react",
 //       stars: 3,
 //       subscribers: 0,
-//       isFrameworkFetching: true
+//       isFrameworkFetching: true,
 //       ecosystem: ["redux", "react-native", "styled-components"]
 //     },
 //     {
@@ -38,25 +44,19 @@ import { setConfig } from "./redux/repoActions";
 //       isFrameworkFetching: true
 //     }
 //   ],
-//   repos: []
+//   repos: {
+//     fetching: false,
+//     items: []
+//   }
 // };
 
-export const initialState = {
-  category: "front",
-  dataSourceSelected: "github",
-  showEcosystems: false,
-  filter: "year",
-  errors: [],
-  frameworks: [],
-  frameworkSelected: "",
-  repos: [],
-  repoFetching: false
-};
-
-export const store = createStore(reducer, applyMiddleware(thunkMiddleware));
+export const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
 
 export const initializeApp = json => {
-  store.dispatch(setConfig(JSON.parse(json), store.getState().category));
+  const config = JSON.parse(json);
+  store.dispatch(setFrameworkSelected(config.frameworkSelected));
+  store.dispatch(setFrameworks(config.frameworks));
+  store.dispatch(setCategory(store.getState().category));
   store
     .getState()
     .frameworks.filter(t => !t.isContender)
@@ -65,7 +65,7 @@ export const initializeApp = json => {
         fetchFrameworks(f.framework, f.organization, f.officialRepoName)
       )
     );
-  store.dispatch(fetchPosts(store.getState().frameworkSelected));
+  store.dispatch(fetchPosts(store.getState().ui.frameworkSelected));
 };
 
 loadJSON(store.getState().category, initializeApp);

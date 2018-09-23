@@ -27,7 +27,7 @@ class App extends Component {
     domNode.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
-  render() {
+  render() {  
     return (
       <div>
         <TopMenu />

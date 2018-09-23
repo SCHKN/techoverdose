@@ -6,30 +6,32 @@ import RedditPost from "./RedditPost";
 import NoResultsItem from "./NoResultsItem";
 
 const mapStateToProps = state => ({
-  data: state
+  repos: state.repos,
+  dataSourceSelected: state.ui.dataSourceSelected,
+  frameworkSelected: state.ui.frameworkSelected
 });
 
 class RepoList extends Component {
   render() {
-    const { data } = this.props;
-    const { repos, repoFetching } = data;
+    const { repos, dataSourceSelected, frameworkSelected } = this.props;
+    const { items, fetching } = repos;
     return (
       <Segment
-        loading={repoFetching}
+        loading={fetching}
         className="results-segment animated fadeIn"
       >
-        {(repos && repos.length === 0 && !repoFetching && <NoResultsItem />) ||
-          repos.map(item => {
-            if (data.dataSourceSelected === "github") {
+        {(items && items.length === 0 && !fetching && <NoResultsItem />) ||
+          items.map(item => {
+            if (dataSourceSelected === "github") {
               return (
                 <RepoItem
                   repo={item}
                   key={item.id}
-                  framework={data.frameworkSelected}
+                  framework={frameworkSelected}
                 />
               );
             } else {
-              return <RedditPost post={item.data} key={item.id} />;
+              return <RedditPost post={item.data} />;
             }
           })}
       </Segment>

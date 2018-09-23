@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Button, Icon, Popup, Dropdown } from "semantic-ui-react";
 import { connect } from "react-redux";
 import topics from "../../configs/topics";
-import { fetchPosts } from "../../redux/repoReducers";
+import { fetchPosts } from "../../redux/repos/reposReducer";
 
 const mapDispatchToProps = dispatch => ({
   fetchPosts: framework => dispatch(fetchPosts(framework, null))

@@ -1,7 +1,7 @@
 import React from "react";
 import { Menu, Icon, Responsive } from "semantic-ui-react";
 import { connect } from "react-redux";
-import { setCategoryAndFetchAll } from "../../redux/repoReducers";
+import { setCategoryAndFetchAll } from "../../redux/category/categoryReducer";
 
 const mapDispatchToProps = dispatch => ({
   changeCategory: category => dispatch(setCategoryAndFetchAll(category))

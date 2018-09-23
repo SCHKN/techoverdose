@@ -4,16 +4,22 @@ import FrameworkItem from "./FrameworkItem";
 import { connect } from "react-redux";
 
 const mapStateToProps = state => ({
-  data: state
+  frameworks: state.frameworks,
+  category: state.category,
+  showEcosystems: state.ui.showEcosystems
 });
 
-const FrameworkGrid = ({ data, handleScroll }) => {
+const FrameworkGrid = ({
+  frameworks,
+  category,
+  showEcosystems,
+  handleScroll
+}) => {
   return (
     <Grid stackable columns={4} className="animated fadeIn">
       <Grid.Row>
-        {data &&
-          data.frameworks &&
-          data.frameworks
+        {frameworks &&
+          frameworks
             .filter(p => !p.isContender)
             .sort((a, b) => a.stars < b.stars)
             .map((z, index) => (
@@ -22,9 +28,9 @@ const FrameworkGrid = ({ data, handleScroll }) => {
                   data={z}
                   key={z.framework}
                   rank={index + 1}
-                  showEcosystems={data.showEcosystems}
+                  showEcosystems={showEcosystems}
                   handleScroll={handleScroll}
-                  category={data.category}
+                  category={category}
                 />
               </Grid.Column>
             ))}

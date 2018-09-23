@@ -1,7 +1,7 @@
 import React from "react";
 import { Segment, List, Image } from "semantic-ui-react";
 import { connect } from "react-redux";
-import { fetchPosts } from "../../redux/repoReducers";
+import { fetchPosts } from "../../redux/repos/reposReducer";
 
 const mapDispatchToProps = dispatch => ({
   fetchPosts: (framework, ecosystem) =>
