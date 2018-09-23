@@ -12,8 +12,8 @@ import ReactDOM from "react-dom";
 import ContendersSegment from './components/contenders/ContendersSegment';
 import CategoryMenu from './components/category/CategoryMenu';
 
-// ReactGA.initialize('UA-125805120-1');
-// ReactGA.pageview(window.location.pathname + window.location.search);
+ReactGA.initialize('UA-125805120-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 class App extends Component {
   constructor(props) {
@@ -35,7 +35,7 @@ class App extends Component {
           <Grid.Column>
             <Container>
               <CategoryMenu />
-              {/* <FeaturesMessage /> */}
+              <FeaturesMessage />
               <Divider horizontal onClick={this.handleScrollToElement}>
                 Frameworks
               </Divider>

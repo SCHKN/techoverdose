@@ -59,11 +59,6 @@ const dataSourceOptions = [
 
 const mapStateToProps = state => ({
   ui: state.ui
-  // ecosystemVisible: state.showEcosystems,
-  // frameworkSelected: state.frameworkSelected,
-  // ecosystemSelected: state.ecosystemSelected,
-  // dataSourceSelected: state.dataSourceSelected,
-  // filter: state.filter
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -80,11 +75,6 @@ const FilterMenu = ({
   showEcosystems,
   hideEcosystems,
   ui
-  // ecosystemVisible,
-  // frameworkSelected,
-  // ecosystemSelected,
-  // dataSourceSelected,
-  // filter
 }) => {
   const {
     frameworkSelected,
