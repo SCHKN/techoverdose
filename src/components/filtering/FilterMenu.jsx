@@ -12,7 +12,6 @@ import {
   setFilterAndFetchPosts,
   setDatasourceAndFetchPosts
 } from "../../redux/ui/uiReducer";
-import SearchPopup from "./SearchPopup";
 import { showEcosystems, hideEcosystems } from "./../../redux/ui/uiActions";
 
 const options = [
@@ -58,7 +57,8 @@ const dataSourceOptions = [
 ];
 
 const mapStateToProps = state => ({
-  ui: state.ui
+  ui: state.ui,
+  frameworks: state.frameworks
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -74,7 +74,8 @@ const FilterMenu = ({
   changeDatasource,
   showEcosystems,
   hideEcosystems,
-  ui
+  ui,
+  frameworks
 }) => {
   const {
     frameworkSelected,
@@ -105,7 +106,12 @@ const FilterMenu = ({
                 <Dropdown
                   inline
                   header="Choose your datasource"
-                  options={dataSourceOptions}
+                  value={dataSourceSelected}
+                  options={
+                    frameworks.find(f => f.framework === frameworkSelected)
+                      ? dataSourceOptions
+                      : dataSourceOptions.filter(p => p.key !== "reddit")
+                  }
                   defaultValue={dataSourceOptions[0].value}
                   onChange={(e, { value }) => {
                     changeDatasource(value);
@@ -146,9 +152,6 @@ const FilterMenu = ({
             />
           </Menu.Item>
         </Responsive>
-        {/* <Menu.Item>
-          <SearchPopup />
-        </Menu.Item> */}
       </Menu.Menu>
     </Menu>
   );

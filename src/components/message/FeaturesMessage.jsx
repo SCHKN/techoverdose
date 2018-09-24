@@ -1,12 +1,19 @@
 import React from "react";
-import { Message, Icon } from "semantic-ui-react";
-const FeaturesMessage = () => {
+import { Message, Icon, Responsive } from "semantic-ui-react";
+import SearchPopup from "../filtering/SearchPopup";
+const FeaturesMessage = ({ handleScroll }) => {
   return (
     <Message info icon>
       <Icon name="star" />
       <Message.Content>
         <Message.Header>Have you heard about the new features?</Message.Header>
         <Message.List>
+          <Message.Item>
+            More than 220 topics have been added to TechOverdose! Try it now!
+            <Responsive maxWidth={990}>
+              <SearchPopup handleScroll={handleScroll}/>
+            </Responsive>
+          </Message.Item>
           <Message.Item>
             Hub Proposals are open! If you want to see a custom hub, visit this
             link and suggest one :{" "}

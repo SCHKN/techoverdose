@@ -2,6 +2,7 @@ import React from "react";
 import { Menu, Icon, Responsive } from "semantic-ui-react";
 import { connect } from "react-redux";
 import { setCategoryAndFetchAll } from "../../redux/category/categoryReducer";
+import SearchPopup from "../filtering/SearchPopup";
 
 const mapDispatchToProps = dispatch => ({
   changeCategory: category => dispatch(setCategoryAndFetchAll(category))
@@ -11,7 +12,7 @@ const handleClick = (changeCategory, category) => {
   changeCategory(category);
 };
 
-const CategoryMenu = ({ changeCategory }) => {
+const CategoryMenu = ({ changeCategory, handleScroll }) => {
   return (
     <Menu size="large">
       <Menu.Item header>Categories</Menu.Item>
@@ -35,10 +36,18 @@ const CategoryMenu = ({ changeCategory }) => {
         <Icon name="idea" />
         <Responsive {...Responsive.onlyComputer}>Machine Learning</Responsive>
       </Menu.Item>
-      <Menu.Item name="btc" onClick={() => handleClick(changeCategory, "crypto")}>
+      <Menu.Item
+        name="btc"
+        onClick={() => handleClick(changeCategory, "crypto")}
+      >
         <Icon name="btc" />
         <Responsive {...Responsive.onlyComputer}>Crypto</Responsive>
       </Menu.Item>
+      <Responsive {...Responsive.onlyComputer}>
+        <Menu.Item>
+          <SearchPopup handleScroll={handleScroll} />
+        </Menu.Item>
+      </Responsive>
     </Menu>
   );
 };

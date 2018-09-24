@@ -9,8 +9,8 @@ import favicon from "./assets/favicon.ico";
 import ReactGA from "react-ga";
 import FeaturesMessage from "./components/message/FeaturesMessage";
 import ReactDOM from "react-dom";
-import ContendersSegment from './components/contenders/ContendersSegment';
-import CategoryMenu from './components/category/CategoryMenu';
+import ContendersSegment from "./components/contenders/ContendersSegment";
+import CategoryMenu from "./components/category/CategoryMenu";
 
 ReactGA.initialize('UA-125805120-1');
 ReactGA.pageview(window.location.pathname + window.location.search);
@@ -27,18 +27,16 @@ class App extends Component {
     domNode.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
-  render() {  
+  render() {
     return (
       <div>
         <TopMenu />
         <Grid className="main-grid">
           <Grid.Column>
             <Container>
-              <CategoryMenu />
-              <FeaturesMessage />
-              <Divider horizontal onClick={this.handleScrollToElement}>
-                Frameworks
-              </Divider>
+              <CategoryMenu handleScroll={this.handleScrollToElement} />
+              <FeaturesMessage handleScroll={this.handleScrollToElement} />
+              <Divider horizontal>Frameworks</Divider>
               <FrameworkGrid handleScroll={this.handleScrollToElement} />
               <ContendersSegment />
               <Divider horizontal>Results</Divider>
