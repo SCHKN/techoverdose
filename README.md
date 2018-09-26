@@ -1,16 +1,17 @@
 <h1 align="center">
-  	<img height="80" src="https://sendeyo.com/up/d/f30c064b15" alt="gitfront" /> <br> gitfront <br>
+  	<img height="80" src="https://sendeyo.com/up/d/f30c064b15" alt="gitfront" /> <br> Techoverdose <br>
     <img align='center' src="https://img.shields.io/badge/version-1.2-brightgreen.svg"/>  
     <img align='center' src='https://img.shields.io/badge/status-up-brightgreen.svg'/>
     <img align='center' src='https://travis-ci.org/SCHKN/gitfront.svg?branch=master' /> <br> <br>
-    
+    <p align='center'> This product was featured on <a  href='https://www.producthunt.com/posts/tech-overdose'> Product Hunt </a> :heart_eyes:, and was elected #4 product of the day, many thanks! </p>
 </h1>
 <p align='center'>
-<a  href='http://www.schkn.io'> :star2: Visit Gitfront :star2: </a> <br> <br>
+<a  href='http://www.schkn.io'> :star2: Visit Techoverdose :star2: </a> <br> <br>
 </p>
 
-<p align='center'>Fetching the best front-end repositories on GitHub.</p>
+<p align='center'>Fetching the best repositories on GitHub, for your favorite techs.</p>
 <p align='center'>Never miss the trendiest tech of the day! :chart_with_upwards_trend:</p> 
+
 
 
 <img align="center" src="https://i.imgur.com/1fXhynf.png" alt="front-page" />
