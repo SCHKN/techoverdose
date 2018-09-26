@@ -23,9 +23,6 @@ const repos = (state = initialState, action) => {
     case REQUEST_REPOS:
       return {
         ...state,
-        // frameworkSelected: action.framework,
-        // ecosystemSelected: action.ecosystem,
-        // errors: [],
         items: [],
         fetching: true
       };
