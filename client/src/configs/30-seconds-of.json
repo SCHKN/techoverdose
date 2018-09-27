@@ -1,0 +1,33 @@
+{
+  "frameworkSelected": "javascript",
+  "frameworks": [
+    {
+      "framework": "javascript",
+      "isContender": false,
+      "organization": "30-seconds",
+      "officialRepoName": "30-seconds-of-code",
+      "subredditName": "javascript"
+    },
+    {
+      "framework": "css",
+      "isContender": false,
+      "organization": "30-seconds",
+      "officialRepoName": "30-seconds-of-css",
+      "subredditName": "css"
+    },
+    {
+      "framework": "python",
+      "isContender": false,
+      "organization": "kriadmin",
+      "officialRepoName": "30-seconds-of-python-code",
+      "subredditName": "python"
+    },
+    {
+      "framework": "php",
+      "isContender": false,
+      "organization": "appzcoder",
+      "officialRepoName": "30-seconds-of-php-code",
+      "subredditName": "php"
+    }
+  ]
+}

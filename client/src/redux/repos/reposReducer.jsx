@@ -48,6 +48,8 @@ export const fetchPosts = (framework, ecosystem) => {
       dispatch(
         fetchRedditPosts(framework, getCorrespondingSubreddit(framework))
       );
+    } else if (datasource === "snippets") {
+      fetchSnippets(framework);
     }
   };
 };

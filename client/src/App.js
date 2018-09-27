@@ -12,6 +12,7 @@ import ReactDOM from "react-dom";
 import ContendersSegment from "./components/contenders/ContendersSegment";
 import CategoryMenu from "./components/category/CategoryMenu";
 
+
 // ReactGA.initialize('UA-125805120-1');
 // ReactGA.pageview(window.location.pathname + window.location.search);
 
@@ -35,7 +36,7 @@ class App extends Component {
           <Grid.Column>
             <Container>
               <CategoryMenu handleScroll={this.handleScrollToElement} />
-              <FeaturesMessage handleScroll={this.handleScrollToElement} />
+              {/* <FeaturesMessage handleScroll={this.handleScrollToElement} /> */}
               <Divider horizontal>Frameworks</Divider>
               <FrameworkGrid handleScroll={this.handleScrollToElement} />
               <ContendersSegment />

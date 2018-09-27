@@ -125,7 +125,6 @@ i.icon.heart {
     #ea5327 75%
   );
 }
-
 .devops-menu:after {
   background: linear-gradient(
     to right,
@@ -137,7 +136,6 @@ i.icon.heart {
     #335061 75%
   );
 }
-
 .ml-menu:after {
   background: linear-gradient(
     to right,
@@ -162,22 +160,21 @@ i.icon.heart {
   );
 }
 
+
+
 /* Front */
 .react-label {
   background-color: #60dbfa !important;
 }
-
 .angular-label {
   background-color: #de0a2f !important;
 }
 .vuejs-label {
   background-color: #3fb787 !important;
 }
-
 .ember-label {
   background-color: #ea5327 !important;
 }
-
 .repo-item-vuejs {
   border-left: 5px solid #3fb787 !important;
 }
@@ -185,11 +182,9 @@ i.icon.heart {
 .repo-item-react {
   border-left: 5px solid #60dbfa !important;
 }
-
 .repo-item-angular {
   border-left: 5px solid #de0a2f !important;
 }
-
 .repo-item-ember {
   border-left: 5px solid #ea5327 !important;
 }
@@ -198,35 +193,29 @@ i.icon.heart {
 .docker-label {
   background-color: #24b8eb !important;
 }
+
 .kubernetes-label {
   background-color: #326de6 !important;
 }
 .ansible-label {
   background-color: black !important;
 }
-
 .jenkins-label {
   background-color: #335061 !important;
 }
-
 .repo-item-docker {
   border-left: 5px solid #24b8eb !important;
 }
-
 .repo-item-kubernetes {
   border-left: 5px solid #326de6 !important;
 }
-
 .repo-item-ansible {
   border-left: 5px solid black !important;
 }
-
 .repo-item-jenkins {
   border-left: 5px solid #335061 !important;
 }
-
 /* Machine Learning */
-
 .tensorflow-label {
   background-color: #e4ba51 !important;
 }
@@ -258,7 +247,6 @@ i.icon.heart {
 }
 
 /* Crypto */
-
 .bitcoin-label {
   background-color: #f7931a !important;
 }
@@ -287,4 +275,44 @@ i.icon.heart {
 
 .repo-item-ripple {
   border-left: 5px solid #0091ca !important;
+}
+
+/* 30 seconds of */
+
+.javascript-label {
+  background-color: #f7df1e !important;
+  color: black !important;
+}
+.css-label {
+  background-color: #8bf1e4 !important;
+}
+.python-label {
+  background-color: #4584b6 !important;
+}
+
+.php-label {
+  background-color: #777bb3 !important;
+}
+
+.repo-item-javascript {
+  border-left: 5px solid #f7df1e !important;
+}
+
+.repo-item-css {
+  border-left: 5px solid #8bf1e4 !important;
+}
+
+.repo-item-python {
+  border-left: 5px solid #4584b6 !important;
+}
+
+.repo-item-php {
+  border-left: 5px solid #777bb3 !important;
+}
+
+/* Snippets */
+code {
+  background: #f0f0f0;
+  color: #8e24aa;
+  padding: 3px;
 }

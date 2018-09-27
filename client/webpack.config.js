@@ -19,7 +19,7 @@ module.exports = {
         use: ["style-loader", "css-loader"]
       },
       {
-        type: 'javascript/auto',
+        type: "javascript/auto",
         test: /\.(ttf|eot|woff|woff2|ico|json)$/,
         use: [
           {
@@ -38,6 +38,17 @@ module.exports = {
             options: {
               name: "images/[name].[ext]"
             }
+          }
+        ]
+      },
+      {
+        test: /\.md$/,
+        use: [
+          {
+            loader: "html-loader"
+          },
+          {
+            loader: "markdown-loader",
           }
         ]
       }

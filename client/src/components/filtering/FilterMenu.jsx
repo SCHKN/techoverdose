@@ -53,7 +53,13 @@ const dataSourceOptions = [
     text: "Reddit",
     value: "reddit",
     content: "Reddit"
-  }
+  },
+  {
+    key: "snippets",
+    text: "Snippets",
+    value: "snippets",
+    content: "Snippets"
+  },
 ];
 
 const mapStateToProps = state => ({

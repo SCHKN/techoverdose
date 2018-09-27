@@ -19,7 +19,11 @@ export default ({ repo, framework }) => {
         <Item.Group>
           <Item className="framework-item">
             <Responsive minWidth="1140">
-              <Item.Image src={repo.owner["avatar_url"]} size="tiny" className="repo-image"/>
+              <Item.Image
+                src={repo.owner["avatar_url"]}
+                size="tiny"
+                className="repo-image"
+              />
             </Responsive>
             <Item.Content>
               <Item.Header as="a" href={repo.html_url}>

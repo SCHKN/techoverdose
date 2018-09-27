@@ -6,22 +6,8 @@ import { store } from "../../index";
 import { setFrameworks } from "../frameworks/frameworksActions";
 import { setFrameworkSelected, setFilter } from "./../ui/uiActions";
 
-export const category = (state = "front", action) => {
+export const category = (state = "30-seconds-of", action) => {
   switch (action.type) {
-    // case RESET_STATE: {
-    //   return {
-    //     ...state,
-    //     frameworkSelected: "",
-    //     frameworks: []
-    //   };
-    // }
-    // case SET_CONFIG:
-    //   return {
-    //     ...state,
-    //     category: action.name,
-    //     // frameworkSelected: action.config.frameworkSelected,
-    //     // frameworks: action.config.frameworks
-    //   };
     case SET_CATEGORY:
       return action.category;
     default:
