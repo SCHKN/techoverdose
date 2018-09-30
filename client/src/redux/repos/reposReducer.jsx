@@ -49,8 +49,15 @@ export const fetchPosts = (framework, ecosystem) => {
         fetchRedditPosts(framework, getCorrespondingSubreddit(framework))
       );
     } else if (datasource === "snippets") {
-      fetchSnippets(framework);
+      dispatch(fetchSnippets(framework));
     }
+  };
+};
+
+const fetchSnippets = (framework) => {
+  return dispatch => {
+    const file = require("../../snippets/" + framework + ".js");
+    dispatch(fetchReposSuccess(file.default.data, framework));
   };
 };
 

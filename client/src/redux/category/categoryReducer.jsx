@@ -6,7 +6,7 @@ import { store } from "../../index";
 import { setFrameworks } from "../frameworks/frameworksActions";
 import { setFrameworkSelected, setFilter } from "./../ui/uiActions";
 
-export const category = (state = "30-seconds-of", action) => {
+export const category = (state = "front", action) => {
   switch (action.type) {
     case SET_CATEGORY:
       return action.category;
