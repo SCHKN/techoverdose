@@ -10,7 +10,7 @@
 </p>
 
 <p align='center'>Fetching the best repositories on GitHub, for your favorite techs.</p>
-<p align='center'>Never miss the trendiest tech of the day! :chart_with_upwards_trend:</p> 
+<p align='center'>Never miss the trendiest tech of the day!! :chart_with_upwards_trend:</p> 
 
 
 
