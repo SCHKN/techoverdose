@@ -7,7 +7,7 @@
 </h1>
 <p align='center'>
 <a  href='http://www.schkn.io'> :star2: Visit Techoverdose :star2: </a> <br> <br>
-<a  href='http://devconnected.com'> :star2: Visit devconnectd :star2: </a> <br> <br>
+<a  href='http://devconnected.com'> :star2: Visit devconnected :star2: </a> <br> <br>
 </p>
 
 <p align='center'>Fetching the best repositories on GitHub, for your favorite techs.</p>
